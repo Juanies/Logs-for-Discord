@@ -28,5 +28,5 @@ El bot no responde a ningún comando, ya que su única función es registrar los
 4. Ejecuta el bot con `node index.js`
 
 ##Licencia
-Este proyecto está licenciado bajo la Licencia MIT.
+Este proyecto está licenciado bajo la Licencia creative common.
 
