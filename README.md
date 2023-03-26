@@ -23,7 +23,7 @@ El bot no responde a ningún comando, ya que su única función es registrar los
   "token": "tu_token_aquí"
 }
 ```
-4. Ejecuta el bot con node `index.js`
+4. Ejecuta el bot con `node index.js`
 
 ##Licencia
 Este proyecto está licenciado bajo la Licencia MIT.
