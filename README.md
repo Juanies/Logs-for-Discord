@@ -8,6 +8,8 @@ El bot utiliza la librería `discord.js` para conectarse y comunicarse con el AP
 
 Además, en una futura versión, el bot también registrará todas las imágenes enviadas en un canal de texto en un directorio específico.
 
+![image](https://user-images.githubusercontent.com/80675013/227780701-14ad84b3-1135-49cb-9545-0fb29955dd0e.png)
+
 ## Comandos
 
 El bot no responde a ningún comando, ya que su única función es registrar los mensajes y comandos enviados en el servidor.
