@@ -1,20 +1,19 @@
-const { Client, GatewayIntentBits, MessageCollector } = require('discord.js'); // npm package discord.js
-const { token } = require('./config.json'); // JSON with the token
-const fs = require('fs'); // npm package fs
+const { Client, GatewayIntentBits, MessageCollector } = require('discord.js'); 
+const { token } = require('./config.json'); 
+const fs = require('fs'); 
 
+//  DISCORD BOT LOG 
 
 const client = new Client({
     intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.DirectMessages, GatewayIntentBits.MessageContent]
 });
 
-// Message collector and generator
 client.on('messageCreate', async interaction => {
 
-    // We can see the available values of each message
 
-    const username = interaction.author.username    // We save the author name of each message ( Lucas )
-    const usernameID = interaction.author.discriminator // We save the author ID of each message ( #0000 )
-    const message = interaction.content // We save the message of each message ( Hello Wold! )
+    const username = interaction.author.username   
+    const usernameID = interaction.author.discriminator 
+    const message = interaction.content 
 
     const date = new Date(); 
 
@@ -26,14 +25,13 @@ client.on('messageCreate', async interaction => {
     const minutes = date.getMinutes();
     const seconds = date.getSeconds();
 
-    fs.appendFile('.\archivos\LogsChat.txt', // Directory where is located the file with the log messages 
-    `[ ${username} #${usernameID} ] : [ ${hours}:${minutes}:${seconds}   / ${day}/${month}/${year}  ]  ${message}`  + `\n`, function (err) { // Message of each logged message
+    fs.appendFile('.\archivos\LogsChat.txt', 
+    `[ ${username} #${usernameID} ] : [ ${hours}:${minutes}:${seconds}   / ${day}/${month}/${year}  ]  ${message}`  + `\n`, function (err) { 
         if (err) throw err;
-        console.log('Updated!'); // Menssage that indicates that the log/message has been registered correctly
+        console.log('Updated!'); 
     });
 });
 
-// Log in to Discord with your client's token
 client.login(token);
 
 
